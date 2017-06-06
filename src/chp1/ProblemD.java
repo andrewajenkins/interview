@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * Write a method to decide if two strings are anagrams or not.
+ */
 public class ProblemD {
 
     @Test
