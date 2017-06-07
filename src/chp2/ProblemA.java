@@ -4,7 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Write code to remove duplicates from an unsorted linked list
+ * Write code to remove duplicates from an unsorted linked list. FOLLOW UP How would you
+ * solve this problem if a temporary buffer is not allowed.
  */
 public class ProblemA {
 
