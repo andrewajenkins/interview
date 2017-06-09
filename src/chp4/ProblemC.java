@@ -14,7 +14,7 @@ import chp4.ProblemA.Node;
  */
 public class ProblemC {
 
-    ProblemA p = new ProblemA();
+    static ProblemA p = new ProblemA();
 
     @Test
     public void test() {
@@ -23,7 +23,7 @@ public class ProblemC {
         assertTrue(ProblemA.isBalanced(n));
     }
 
-    private Node makeBalancedTree(int[] a) {
+    static Node makeBalancedTree(int[] a) {
         Node n = null;
         if(a.length > 0) {
             n = p.new Node(a[a.length/2]);
