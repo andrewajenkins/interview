@@ -21,24 +21,24 @@ public class ProblemA {
         assertFalse(isBalanced(rootLinear));
     }
 
-    boolean isBalanced(Node root) {
+    static boolean isBalanced(Node root) {
         int max = getMax(root, 0);
         int min = getMin(root, 0);
         return (max - min) <= 1;
     }
 
-    private int getMin(Node root, int count) {
+    private static int getMin(Node root, int count) {
         count++;
         if(root.left == null || root.right == null) return count;
         return Math.min(getMin(root.left, count), getMin(root.right, count));
     }
 
-    private int getMax(Node root, int count) {
+    private static int getMax(Node root, int count) {
         count++;
         if(root.left == null && root.right == null) return count;
-        int left = Integer.MAX_VALUE;
+        int left = -1;
         if(root.left != null) left = getMax(root.left, count);
-        int right = Integer.MAX_VALUE;
+        int right = -1;
         if(root.right != null) right = getMax(root.right, count);
         return Math.max(left, right);
     }
@@ -49,6 +49,9 @@ public class ProblemA {
         int data;
         Node(int data) {
             this.data = data;
+        }
+        public String toString() {
+            return data + " ";
         }
     }
 
