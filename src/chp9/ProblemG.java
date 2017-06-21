@@ -2,6 +2,7 @@ package chp9;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -18,12 +19,12 @@ public class ProblemG {
 
     @Test
     public void test() {
-        int[][] input = {{65,100},{70,150},{56,90},{75,190},{60,95},{68,110}};
-        int[][] output = {{56,90},{60,95},{65,100},{68,110},{70,150},{75,190}};
-        assertTrue(Arrays.equals(maxSequence(input), output));
+        Integer[][] input = {{65,100},{70,150},{56,90},{75,190},{60,95},{68,110}};
+        Integer[][] output = {{56,90},{60,95},{65,100},{68,110},{70,150},{75,190}};
+        assertTrue(Arrays.deepEquals(maxSequence(input), output));
     }
 
-    public int[][] maxSequence(int[][] a) {
+    public Integer[][] maxSequence(Integer[][] a) {
         Arrays.sort(a, new HeightComparator());
         Arrays.sort(a, new WeightComparator());
         return a;
